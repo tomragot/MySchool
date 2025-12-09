@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Faculty Staff - MySchool</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="../../static/img/favicon.png" rel="icon">
+  <link href="../../static/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../../static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../../static/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../../static/vendor/aos/aos.css" rel="stylesheet">
+  <link href="../../static/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="../../static/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="../../static/style/main.css" rel="stylesheet">
+
+</head>
+
+<body class="faculty-staff-page">
+
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-end">
+
+       <a href="{% url 'index' %}" class="logo d-flex align-items-center me-auto">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.webp" alt=""> -->
+        <h1 class="sitename">MySchool</h1>
+      </a>
+
+     <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="{% url 'index' %}">Home</a></li>
+          <li class="dropdown"><a href="{% url 'about' %}"><span>About</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="{% url 'about' %}">About Us</a></li>
+              <li><a href="{% url 'admissions' %}"class="active">Admissions</a></li>
+              <li><a href="{% url 'academics' %}">Academics</a></li>
+              <li><a href="{% url 'faculty-staff' %}">Faculty &amp; Staff</a></li>
+              <li><a href="{% url 'campus-facilities' %}">Campus &amp; Facilities</a></li>
+            </ul>
+          </li>
+
+          <li><a href="{% url 'students-life' %}">Students Life</a></li>
+          <li><a href="{% url 'news' %}">News</a></li>
+          <li><a href="{% url 'events' %}">Events</a></li>
+          <li><a href="{% url 'alumni' %}">Alumni</a></li>
+          <li class="dropdown"><a href="#"><span>More Pages</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="{% url 'news-details' %}">News Details</a></li>
+              <li><a href="{% url 'eventDetails' %}">Event Details</a></li>
+              <li><a href="{% url 'privacy' %}">Privacy</a></li>
+              <li><a href="{% url 'termOfservice' %}">Terms of Service</a></li>
+              <li><a href="{% url '404' %}">Error 404</a></li>
+              <li><a href="{% url 'starter-page' %}">Starter Page</a></li>
+            </ul>
+          </li>
+
+          <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="#">Dropdown 1</a></li>
+              <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul>
+                  <li><a href="#">Deep Dropdown 1</a></li>
+                  <li><a href="#">Deep Dropdown 2</a></li>
+                  <li><a href="#">Deep Dropdown 3</a></li>
+                  <li><a href="#">Deep Dropdown 4</a></li>
+                  <li><a href="#">Deep Dropdown 5</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Dropdown 2</a></li>
+              <li><a href="#">Dropdown 3</a></li>
+              <li><a href="#">Dropdown 4</a></li>
+            </ul>
+          </li>
+          <li><a href="{% url 'contact' %}">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+    </div>
+  </header>
+
+
+  <main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title light-background">
+      <div class="container d-lg-flex justify-content-between align-items-center">
+        <h1 class="mb-2 mb-lg-0">Faculty Staff</h1>
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="{% url 'index' %}">Home</a></li>
+            <li class="{% 'faculty-staff' %}">Faculty Staff</li>
+          </ol>
+        </nav>
+      </div>
+    </div><!-- End Page Title -->
+
+    <!-- Faculty  Staff Section -->
+    <section id="faculty--staff" class="faculty--staff section">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row mb-5">
+          <div class="col-lg-8 mx-auto">
+            <div class="faculty-search">
+              <div class="input-group">
+                <input type="text" class="form-control" placeholder="Search faculty by name, department or research area...">
+                <button class="search-btn" type="button">
+                  <i class="bi bi-search"></i>
+                </button>
+              </div>
+              <div class="search-filters mt-3 d-flex flex-wrap">
+                <div class="filter-item active">All</div>
+                <div class="filter-item">Professors</div>
+                <div class="filter-item">Associate Professors</div>
+                <div class="filter-item">Assistant Professors</div>
+                <div class="filter-item">Staff</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="faculty-grid">
+          <div class="row g-4">
+            <!-- Faculty Member 1 -->
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+              <div class="faculty-card">
+                <div class="faculty-image">
+                  <img src="../../static/img/pp1.jpg" class="img-fluid" alt="Faculty Member">
+                  <div class="social-links">
+                    <a href="#"><i class="bi bi-twitter"></i></a>
+                    <a href="#"><i class="bi bi-linkedin"></i></a>
+                    <a href="#"><i class="bi bi-envelope"></i></a>
+                  </div>
+                </div>
+                <div class="faculty-info">
+                  <h3>Dr. Tom R</h3>
+                  <p class="position">Professor of Computer Science</p>
+                  <div class="department">School of Computing</div>
+                  <div class="research-tags">
+                    <span>Artificial Intelligence</span>
+                    <span>Machine Learning</span>
+                    <span>Neural Networks</span>
+                  </div>
+                  <a href="#" class="profile-link">View Profile</a>
+                </div>
+              </div>
+            </div><!-- End Faculty Member -->
+
+            <!-- Faculty Member 2 -->
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+              <div class="faculty-card">
+                <div class="faculty-image">
+                  <img src="../../static/img/p5.jpg" class="img-fluid" alt="Faculty Member">
+                  <div class="social-links">
+                    <a href="#"><i class="bi bi-twitter"></i></a>
+                    <a href="#"><i class="bi bi-linkedin"></i></a>
+                    <a href="#"><i class="bi bi-envelope"></i></a>
+                  </div>
+                </div>
+                <div class="faculty-info">
+                  <h3>Dr. Sarah O</h3>
+                  <p class="position">Associate Professor of Biology</p>
+                  <div class="department">Department of Life Sciences</div>
+                  <div class="research-tags">
+                    <span>Molecular Biology</span>
+                    <span>Genetics</span>
+                    <span>Biotechnology</span>
+                  </div>
+                  <a href="#" class="profile-link">View Profile</a>
+                </div>
+              </div>
+            </div><!-- End Faculty Member -->
+
+            <!-- Faculty Member 3 -->
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+              <div class="faculty-card">
+                <div class="faculty-image">
+                  <img src="../../static/img/pp4.jpg" class="img-fluid" alt="Faculty Member">
+                  <div class="social-links">
+                    <a href="#"><i class="bi bi-twitter"></i></a>
+                    <a href="#"><i class="bi bi-linkedin"></i></a>
+                    <a href="#"><i class="bi bi-envelope"></i></a>
+                  </div>
+                </div>
+                <div class="faculty-info">
+                  <h3>Dr. Michael Luke</h3>
+                  <p class="position">Assistant Professor of Physics</p>
+                  <div class="department">Department of Physical Sciences</div>
+                  <div class="research-tags">
+                    <span>Play-group</span>
+                    <span>Grade 3</span>
+                    <span>JS</span>
+                  </div>
+                  <a href="#" class="profile-link">View Profile</a>
+                </div>
+              </div>
+            </div><!-- End Faculty Member -->
+
+            <!-- Faculty Member 4 -->
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+              <div class="faculty-card">
+                <div class="faculty-image">
+                  <img src="../../static/img/t4.png" class="img-fluid" alt="Faculty Member">
+                  <div class="social-links">
+                    <a href="#"><i class="bi bi-twitter"></i></a>
+                    <a href="#"><i class="bi bi-linkedin"></i></a>
+                    <a href="#"><i class="bi bi-envelope"></i></a>
+                  </div>
+                </div>
+                <div class="faculty-info">
+                  <h3>Mrs. Elizabeth Ragot</h3>
+                  <p class="position">Teacher of Mathematics</p>
+                  <div class="department">Physical fitness</div>
+                  <div class="research-tags">
+                    <span>Modern Literature</span>
+                    <span>Critical Theory</span>
+                    <span>Creative Writing</span>
+                  </div>
+                  <a href="#" class="profile-link">View Profile</a>
+                </div>
+              </div>
+            </div><!-- End Faculty Member -->
+
+            <!-- Faculty Member 5 -->
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+              <div class="faculty-card">
+                <div class="faculty-image">
+                  <img src="../../static/img/t6.jpg" class="img-fluid" alt="Faculty Member">
+                  <div class="social-links">
+                    <a href="#"><i class="bi bi-twitter"></i></a>
+                    <a href="#"><i class="bi bi-linkedin"></i></a>
+                    <a href="#"><i class="bi bi-envelope"></i></a>
+                  </div>
+                </div>
+                <div class="faculty-info">
+                  <h3>Susam Mary</h3>
+                  <p class="position">Games and sport</p>
+                  <div class="department">Humanities</div>
+                  <div class="research-tags">
+                    <span>Kiswahili</span>
+                    <span>Agriculture</span>
+                    <span>Publishing</span>
+                  </div>
+                  <a href="#" class="profile-link">View Profile</a>
+                </div>
+              </div>
+            </div><!-- End Faculty Member -->
+
+            <!-- Faculty Member 6 -->
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+              <div class="faculty-card">
+                <div class="faculty-image">
+                  <img src="../../static/img/t3.webp" class="img-fluid" alt="Faculty Member">
+                  <div class="social-links">
+                    <a href="#"><i class="bi bi-twitter"></i></a>
+                    <a href="#"><i class="bi bi-linkedin"></i></a>
+                    <a href="#"><i class="bi bi-envelope"></i></a>
+                  </div>
+                </div>
+                <div class="faculty-info">
+                  <h3> Jennifer Njoki</h3>
+                  <p class="position">Assistant Professor of Psychology</p>
+                  <div class="department">Department of Behavioral Sciences</div>
+                  <div class="research-tags">
+                    <span>Cognitive Psychology</span>
+                    <span>Child Development</span>
+                    <span>Behavioral Studies</span>
+                  </div>
+                  <a href="#" class="profile-link">View Profile</a>
+                </div>
+              </div>
+            </div><!-- End Faculty Member -->
+          </div>
+        </div>
+
+        <div class="pagination-container mt-5 d-flex justify-content-center" data-aos="fade-up">
+          <nav aria-label="Faculty pagination">
+            <ul class="pagination">
+              <li class="page-item disabled">
+                <a class="page-link" href="#" aria-label="Previous">
+                  <i class="bi bi-chevron-left"></i>
+                </a>
+              </li>
+              <li class="page-item active"><a class="page-link" href="#">1</a></li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item">
+                <a class="page-link" href="#" aria-label="Next">
+                  <i class="bi bi-chevron-right"></i>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+      </div>
+
+    </section><!-- /Faculty  Staff Section -->
+
+  </main>
+
+ <footer id="footer" class="footer position-relative light-background">
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="{% url 'index' %}" class="logo d-flex align-items-center">
+            <span class="sitename">MySchool</span>
+          </a>
+          <div class="footer-contact pt-3">
+            <p>75, Kimathi, Street</p>
+            <p>Nairobi, Kenya</p>
+            <p class="mt-3"><strong>Phone:</strong> <span>+254797616280</span></p>
+            <p><strong>Email:</strong> <span>bidenbiden2030@gmail.com</span></p>
+          </div>
+            <div class="social-links text-center">
+      <a href="https://twitter.com/@ragot99848" class="twitter"><i class="bi bi-twitter-x"></i></a>
+      <a href="https://www.facebook.com/tom.ragot.1/" class="facebook"><i class="bi bi-facebook"></i></a>
+      <a href="https://www.instagram.com/ragotjunior9/" class="instagram"><i class="bi bi-instagram"></i></a>
+      <a href="https://account.microsoft.com/profile?lang=en-US#main-content-landing-react" class="google-plus"><i class="bi bi-skype"></i></a>
+      <a href="https://www.linkedin.com/in/tom-ragot-048437188/" class="linkedin"><i class="bi bi-linkedin"></i></a>
+    </div>
+
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><a href="{% url 'index' %}">Home</a></li>
+            <li><a href="{% url 'about' %}">About us</a></li>
+            <li><a href="{% url 'academics' %}">Services</a></li>
+            <li><a href="{% url 'termOfservice' %}">Terms of service</a></li>
+            <li><a href="{% url 'privacy' %}">Privacy policy</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>More About Us</h4>
+          <ul>
+            <li><a href="{% url 'admissions' %}">Admission</a></li>
+            <li><a href="{% url 'alumni' %}">alumni</a></li>
+            <li><a href="{% url 'assessments' %}">Assessments</a></li>
+            <li><a href="{% url 'contact' %}">Contact Us</a></li>
+            <li><a href="{% url 'events' %}">Our Events</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">MySchool</strong> <span>All Rights Reserved</span></p>
+      <div class="credits">
+
+        Designed by <a href="https://bootstrapmade.com/">ragot</a>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="../../static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../../static/vendor/php-email-form/validate.js"></script>
+  <script src="../../static/vendor/aos/aos.js"></script>
+  <script src="../../static/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="../../static/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="../../static/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="../../static/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="../../static/vendor/glightbox/js/glightbox.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="../../static/js/main.js"></script>
+
+</body>
+
+</html>

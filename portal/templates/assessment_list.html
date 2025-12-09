@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="container mt-5">
+
+    <h2 class="mb-3">Student Assessments</h2>
+
+    <a href="{% url 'assessment' %}" class="btn btn-success mb-3">+ New Assessment</a>
+
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>Student</th>
+                <th>Class</th>
+                <th>Subject</th>
+                <th>Score</th>
+                <th>Comments</th>
+                <th>Date</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            {% for item in assessments %}
+            <tr>
+                <td>{{ item.student.name }}</td>
+                <td>{{ item.student.class_level }}</td>
+                <td>{{ item.subject }}</td>
+                <td>{{ item.score }}</td>
+                <td>{{ item.comments|default:"No comments" }}</td>
+                <td>{{ item.date_assessed }}</td>
+                <td>
+                    <a href="{% url 'assessment-delete' item.id %}"
+                       class="btn btn-sm btn-danger"
+                       onclick="return confirm('Are you sure you want to delete this assessment?');">
+                       Delete
+                    </a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+</div>
+
+{% endblock %}
+

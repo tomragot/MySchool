@@ -1,0 +1,1383 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>MySchool<</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="../../static/img/favicon.png" rel="icon">
+  <link href="../../static/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <link rel="stylesheet" href="../../static/style/main.css">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../../static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../../static/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../../static/vendor/aos/aos.css" rel="stylesheet">
+  <link href="../../static/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="../../static/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="../../static/style/main.css" rel="stylesheet">
+
+
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-end">
+
+      <a href="{% url 'index' %}" class="logo d-flex align-items-center me-auto">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.webp" alt=""> -->
+        <h1 class="sitename">MySchool</h1>
+      </a>
+
+     <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="{% url 'index' %}">Home</a></li>
+          <li class="dropdown"><a href="{% url 'about' %}"><span>About</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="{% url 'about' %}">About Us</a></li>
+              <li><a href="{% url 'admissions' %}"class="active">Admissions</a></li>
+              <li><a href="{% url 'academics' %}">Academics</a></li>
+              <li><a href="{% url 'faculty-staff' %}">Faculty &amp; Staff</a></li>
+              <li><a href="{% url 'campus-facilities' %}">Campus &amp; Facilities</a></li>
+            </ul>
+          </li>
+
+          <li><a href="{% url 'students-life' %}">Students Life</a></li>
+          <li><a href="{% url 'news' %}">News</a></li>
+          <li><a href="{% url 'events' %}">Events</a></li>
+          <li><a href="{% url 'alumni' %}">Alumni</a></li>
+          <li class="dropdown"><a href="#"><span>More Pages</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="{% url 'news-details' %}">News Details</a></li>
+              <li><a href="{% url 'eventDetails' %}">Event Details</a></li>
+              <li><a href="{% url 'privacy' %}">Privacy</a></li>
+              <li><a href="{% url 'termOfservice' %}">Terms of Service</a></li>
+              <li><a href="{% url '404' %}">Error 404</a></li>
+              <li><a href="{% url 'starter-page' %}">Starter Page</a></li>
+            </ul>
+          </li>
+
+          <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="#">Dropdown 1</a></li>
+              <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul>
+                  <li><a href="#">Deep Dropdown 1</a></li>
+                  <li><a href="#">Deep Dropdown 2</a></li>
+                  <li><a href="#">Deep Dropdown 3</a></li>
+                  <li><a href="#">Deep Dropdown 4</a></li>
+                  <li><a href="#">Deep Dropdown 5</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Dropdown 2</a></li>
+              <li><a href="#">Dropdown 3</a></li>
+              <li><a href="#">Dropdown 4</a></li>
+            </ul>
+          </li>
+          <li><a href="{% url 'contact' %}">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section">
+
+      <div class="hero-wrapper">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-lg-6 hero-content" data-aos="fade-right" data-aos-delay="100">
+              <h1>Inspiring Excellence Through Education</h1>
+              <p>Empowering students with transformative learning experiences that inspire growth, leadership, and lifelong academic success for all.
+</p>
+              <div class="stats-row">
+                <div class="stat-item">
+                  <span class="stat-number">90%</span>
+                  <span class="stat-label">Employment Rate</span>
+                </div>
+                <div class="stat-item">
+                  <span class="stat-number">20:1</span>
+                  <span class="stat-label">Learner-Teacher Ratio</span>
+                </div>
+                <div class="stat-item">
+                  <span class="stat-number">40+</span>
+                  <span class="stat-label">Programs</span>
+                </div>
+              </div>
+              <div class="action-buttons">
+                <a href="{% url 'admissions' %}" class="btn-primary">Start Your Journey</a>
+                <a href="{% url 'starter-page' %}" class="btn-secondary">Virtual Tour</a>
+              </div>
+            </div>
+            <div class="col-lg-6 hero-media" data-aos="zoom-in" data-aos-delay="200">
+              <img src="../../static/img/sch2.jpg" alt="Education" class="img-fluid main-image">
+              <div class="image-overlay">
+                <div class="badge-accredited">
+                  <i class="bi bi-patch-check-fill"></i>
+                  <span>Accredited Excellence</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="feature-cards-wrapper" data-aos="fade-up" data-aos-delay="300">
+        <div class="container">
+          <div class="row gy-4">
+            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+              <div class="feature-card">
+                <div class="feature-icon">
+                  <i class="bi bi-book-fill"></i>
+                </div>
+                <div class="feature-content">
+                  <h3>Innovative Curriculum</h3>
+                  <p>Competency-based learning that nurtures skills, creativity, collaboration, and practical knowledge to prepare holistic, capable learners
+</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+              <div class="feature-card active">
+                <div class="feature-icon">
+                  <i class="bi bi-laptop-fill"></i>
+                </div>
+                <div class="feature-content">
+                  <h3>Modern Facilities</h3>
+                  <p>Our modern facilities provide dynamic, well-equipped learning spaces that support hands-on, collaborative, and competency-based education for every learner.
+</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
+              <div class="feature-card">
+                <div class="feature-icon">
+                  <i class="bi bi-people-fill"></i>
+                </div>
+                <div class="feature-content">
+                  <h3>Expert Faculty</h3>
+                  <p>Our expert faculty combines professional mastery and CBC-centered teaching approaches to nurture capable, confident, and lifelong learners.
+</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="upcoming-event" data-aos="fade-up" data-aos-delay="400">
+        <div class="container">
+          <div class="event-content">
+            <div class="event-date">
+              <span class="day">7</span>
+              <span class="month">JAN</span>
+            </div>
+            <div class="event-info">
+              <h3>Spring Semester Open House</h3>
+              <p>Join us to explore campus facilities, meet our faculty, and learn about scholarship opportunities.</p>
+            </div>
+            <div class="event-action">
+              <a href="#" class="btn-event">RSVP Jan</a>
+              <span class="countdown">Starts in 4 weeks</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section><!-- /Hero Section -->
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6">
+            <div class="about-content" data-aos="fade-up" data-aos-delay="200">
+              <h3>Our Story</h3>
+              <h2>Educating Minds, Inspiring Hearts</h2>
+              <p>Our story reflects a commitment to holistic CBC learning, shaping bright minds while nurturing strong values and compassionate hearts.</p>
+
+              <div class="timeline">
+                <div class="timeline-item">
+                  <div class="timeline-dot"></div>
+                  <div class="timeline-content">
+                    <h4>2022</h4>
+                    <p>A year of ideation and visualization on how to provide quality education rooted in values, excellence, and holistic development. Since its introduction, the school has continued to grow, inspire, and transform young learners into confident, capable future leaders.</p>
+                  </div>
+                </div>
+
+                <div class="timeline-item">
+                  <div class="timeline-dot"></div>
+                  <div class="timeline-content">
+                    <h4>2023</h4>
+                      <p>A foundational year of rebuilding, strengthening systems, and advancing our CBC mission.</p>
+
+                  </div>
+                </div>
+
+                <div class="timeline-item">
+                  <div class="timeline-dot"></div>
+                  <div class="timeline-content">
+                    <h4>2024</h4>
+                  <p>A year of growth, achievement, innovation, and strengthened community through CBC learning.
+</p>
+                  </div>
+                </div>
+
+                <div class="timeline-item">
+                  <div class="timeline-dot"></div>
+                  <div class="timeline-content">
+                    <h4>2025</h4>
+                    <p>A transformative year promising innovation, growth, and empowering CBC excellence for every learner.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="about-image" data-aos="zoom-in" data-aos-delay="300">
+              <img src="../../static/img/sch3.jpg" alt="Campus" class="img-fluid rounded">
+
+              <div class="mission-vision" data-aos="fade-up" data-aos-delay="400">
+                <div class="mission">
+                  <h3>Our Mission</h3>
+                  <p>To deliver holistic, competency-based education that nurtures knowledge, character, creativity, and lifelong learners.</p>
+                </div>
+
+                <div class="vision">
+                  <h3>Our Vision</h3>
+                  <p>To be a leading CBC school, shaping innovative, compassionate, and empowered lifelong learners.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row mt-5">
+          <div class="col-lg-12">
+            <div class="core-values" data-aos="fade-up" data-aos-delay="500">
+              <h3 class="text-center mb-4">Core Values</h3>
+              <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+                <div class="col">
+                  <div class="value-card">
+                    <div class="value-icon">
+                      <i class="bi bi-book"></i>
+                    </div>
+                    <h4>Academic Excellence</h4>
+                    <p>We strive for outstanding academic achievement by fostering curiosity, critical thinking, and a love for learning.</p>
+                  </div>
+                </div>
+
+                <div class="col">
+                  <div class="value-card">
+                    <div class="value-icon">
+                      <i class="bi bi-people"></i>
+                    </div>
+                    <h4>Community Engagement</h4>
+                    <p>We actively connect with and contribute to our community, fostering responsibility, collaboration, and positive impact.</p>
+                  </div>
+                </div>
+
+                <div class="col">
+                  <div class="value-card">
+                    <div class="value-icon">
+                      <i class="bi bi-lightbulb"></i>
+                    </div>
+                    <h4>Innovation</h4>
+                    <p>We embrace creativity and forward-thinking, encouraging new ideas and solutions to enhance learning experiences.</p>
+                  </div>
+                </div>
+
+                <div class="col">
+                  <div class="value-card">
+                    <div class="value-icon">
+                      <i class="bi bi-globe"></i>
+                    </div>
+                    <h4>Global Perspective</h4>
+                    <p>We cultivate awareness, understanding, and respect for diverse cultures, preparing students as responsible global citizens.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /About Section -->
+
+    <!-- Featured Programs Section -->
+    <section id="featured-programs" class="featured-programs section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Featured Programs</h2>
+        <p>Engaging programs fostering creativity, skills, leadership, and holistic CBC student development.
+</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-5">
+          <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
+            <div class="program-banner">
+              <div class="banner-image">
+                <img src="../../static/img/sch4.jpg" alt="Program" class="img-fluid">
+                <div class="banner-badge">
+                  <span class="badge-text">Popular</span>
+                </div>
+              </div>
+              <div class="banner-info">
+                <div class="program-header">
+                  <h3>Innovative Design and Technology</h3>
+                  <div class="program-stats">
+                    <span><i class="bi bi-people-fill"></i> 270+ Students</span>
+                    <span><i class="bi bi-award-fill"></i> 85% Success Rate</span>
+                  </div>
+                </div>
+                <p>This program develops students’ problem-solving, creativity, and technical skills through hands-on projects and real-world applications.</p>
+                <div class="program-details">
+                  <div class="detail-item">
+                    <i class="bi bi-calendar-check"></i>
+                    <span>Duration: The program runs throughout the academic year, allowing students to progressively develop skills and complete projects.</span>
+                  </div>
+                  <div class="detail-item">
+                    <i class="bi bi-mortarboard-fill"></i>
+                    <span>Middle School (Upper Primary Grades 4‑6 and Lower Secondary/Junior Secondary Grades 7‑10)</span>
+                  </div>
+                </div>
+                <a href="#" class="discover-btn">Discover Program</a>
+              </div>
+            </div>
+          </div><!-- End Program Banner -->
+
+          <div class="col-lg-6">
+            <div class="programs-grid">
+              <div class="row g-3">
+                <div class="col-12" data-aos="fade-left" data-aos-delay="200">
+                  <div class="program-item">
+                    <div class="item-icon">
+                      <img src="../../static/img/tech.jpg" alt="Program" class="img-fluid">
+                    </div>
+                    <div class="item-content">
+                      <h4>Innovative Design and Technology</h4>
+                      <p>Develops students’ creativity, problem-solving, and technical skills through hands-on projects and real-world applications.
+</p>
+                      <div class="meta-info">
+                        <span>Runs throughout the academic year, allowing progressive mastery of skills and completion of practical projects.</span>
+                        <span>Certificate of Competency in Innovative Design and Technology, recognized under Kenya’s CBC framework.</span>
+                      </div>
+                    </div>
+                    <div class="item-arrow">
+                      <i class="bi bi-arrow-right"></i>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-12" data-aos="fade-left" data-aos-delay="300">
+                  <div class="program-item">
+                    <div class="item-icon">
+                      <img src="../../static/img/sci.jpg" alt="Program" class="img-fluid">
+                    </div>
+                    <div class="item-content">
+                      <h4>Science and Environment</h4>
+                      <p>Explores scientific concepts, environmental awareness, and practical experiments to develop critical thinking and problem-solving skills.</p>
+                      <div class="meta-info">
+                        <span>Runs throughout the academic year, allowing progressive understanding and hands-on application of scientific principles.
+</span>
+                        <span>Certificate of Competency in Science and Environment, recognized under Kenya’s CBC framework.</span>
+                      </div>
+                    </div>
+                    <div class="item-arrow">
+                      <i class="bi bi-arrow-right"></i>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-12" data-aos="fade-left" data-aos-delay="400">
+                  <div class="program-item">
+                    <div class="item-icon">
+                      <img src="../../static/img/maths.jpg" alt="Program" class="img-fluid">
+                    </div>
+                    <div class="item-content">
+                      <h4>Mathematics and Computational Thinking</h4>
+                      <p>Builds logical reasoning, numeracy, and coding skills through problem-solving, projects, and practical applications.</p>
+                      <div class="meta-info">
+                        <span>Runs throughout the academic year, enabling gradual mastery of concepts and computational techniques.</span>
+                        <span>Certificate of Competency in Mathematics and Computational Thinking, recognized under Kenya’s CBC framework.</span>
+                      </div>
+                    </div>
+                    <div class="item-arrow">
+                      <i class="bi bi-arrow-right"></i>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-12" data-aos="fade-left" data-aos-delay="500">
+                  <div class="program-item">
+                    <div class="item-icon">
+                      <img src="../../static/img/creativity.jpg" alt="Program" class="img-fluid">
+                    </div>
+                    <div class="item-content">
+                      <h4>Arts, Culture, and Creativity</h4>
+                      <p>Fosters artistic expression, cultural appreciation, and creative thinking through hands-on projects and collaborative activities.</p>
+                      <div class="meta-info">
+                        <span>Runs throughout the academic year, allowing students to explore, create, and refine their artistic</span>
+                        <span>Certificate of Competency in Arts, Culture, and Creativity, recognized under Kenya’s CBC framework</span>
+                      </div>
+                    </div>
+                    <div class="item-arrow">
+                      <i class="bi bi-arrow-right"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Programs Grid -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Featured Programs Section -->
+
+    <!-- Students Life Block Section -->
+    <section id="students-life-block" class="students-life-block section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Students Life</h2>
+        <p>Our students thrive in a dynamic environment, balancing academics, creativity, leadership, and community involvement.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row align-items-center g-5 mb-5">
+          <div class="col-lg-5" data-aos="fade-right" data-aos-delay="200">
+            <div class="hero-image-wrapper">
+              <img src="../../static/img/classroom.jpg" alt="Student Life" class="img-fluid main-image">
+              <div class="floating-card" data-aos="zoom-in" data-aos-delay="400">
+                <div class="card-icon">
+                  <i class="bi bi-people-fill"></i>
+                </div>
+                <div class="card-content">
+                  <span class="card-number">2500+</span>
+                  <span class="card-label">Active Students</span>
+                </div>
+              </div>
+            </div>
+              </div>
+
+          <div class="col-lg-7" data-aos="fade-left" data-aos-delay="300">
+            <div class="content-wrapper">
+              <div class="section-badge" data-aos="fade-up" data-aos-delay="350">
+                <span>Student Life</span>
+              </div>
+              <h2 data-aos="fade-up" data-aos-delay="400">Learning, Leading, and Living Fully</h2>
+              <p class="lead-text" data-aos="fade-up" data-aos-delay="450">Engaging learning, creativity, leadership, and community for holistic student growth.</p>
+
+              <div class="info-grid" data-aos="fade-up" data-aos-delay="500">
+                <div class="info-item">
+                  <div class="info-icon">
+                    <i class="bi bi-calendar-event"></i>
+                  </div>
+                  <div class="info-text">
+                    <strong>Year-Round Events</strong>
+                    <span>A vibrant calendar of academic, cultural, sports, and community events enriching student growth</span>
+                  </div>
+                </div>
+
+                <div class="info-item">
+                  <div class="info-icon">
+                    <i class="bi bi-award"></i>
+                  </div>
+                  <div class="info-text">
+                    <strong>Achievement Programs</strong>
+                    <span>Programs recognizing student excellence in academics, creativity, leadership, and community engagement through CSL2</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="cta-section" data-aos="fade-up" data-aos-delay="600">
+                <a href="{% url 'students-life' %}" class="btn-primary">Discover More</a>
+                <a href="{% url 'starter-page' %}" class="btn-link">
+                  <i class="bi bi-play-circle"></i>
+                  <span>Take Virtual Tour</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="activities-showcase">
+          <div class="row g-4">
+            <div class="col-lg-8" data-aos="fade-right" data-aos-delay="200">
+              <div class="featured-activity">
+                <div class="activity-media">
+                  <img src="../../static/img/sch5.jpg" alt="Featured Activity" class="img-fluid">
+                  <div class="activity-overlay">
+                    <div class="overlay-content">
+                      <h4>Student Organizations</h4>
+                      <p>Our Clubs nurture leadership, teamwork, creativity, and active participation in school life.</p>
+                      <a href="#" class="overlay-btn">
+                        <i class="bi bi-arrow-right"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4" data-aos="fade-left" data-aos-delay="300">
+              <div class="activities-list">
+                <div class="activity-item" data-aos="slide-up" data-aos-delay="350">
+                  <div class="activity-thumb">
+                    <img src="../../static/img/researc1.jpg" alt="Research Projects" class="img-fluid">
+                  </div>
+                  <div class="activity-info">
+                    <h6>Research Projects</h6>
+                    <p>Inquiry, innovation, problem-solving, creativity, collaboration.</p>
+                  </div>
+                </div>
+
+                <div class="activity-item" data-aos="slide-up" data-aos-delay="400">
+                  <div class="activity-thumb">
+                    <img src="../../static/img/waste.jpg" alt="Community Service" class="img-fluid">
+                  </div>
+                  <div class="activity-info">
+                    <h6>Community Service</h6>
+                    <p>Students participate in tree planting, school clean-ups, and local charity initiatives, fostering responsibility.</p>
+                  </div>
+                </div>
+
+                <div class="activity-item" data-aos="slide-up" data-aos-delay="450">
+                  <div class="activity-thumb">
+                    <img src="../../static/img/innovation.jpg" alt="Innovation Labs" class="img-fluid">
+                  </div>
+                  <div class="activity-info">
+                    <h6>Innovation Labs</h6>
+                    <p>Hands-on labs where students explore, experiment, and create, fostering creativity and problem-solving skills.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /Students Life Block Section -->
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Testimonials</h2>
+        <p>Voices sharing experiences, achievements, satisfaction, and growth within our school community.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="testimonial-slider swiper init-swiper">
+          <script type="application/json" class="swiper-config">
+            {
+              "loop": true,
+              "speed": 600,
+              "autoplay": {
+                "delay": 4000
+              },
+              "slidesPerView": 1,
+              "spaceBetween": 30,
+              "navigation": {
+                "nextEl": ".swiper-button-next",
+                "prevEl": ".swiper-button-prev"
+              },
+              "breakpoints": {
+                "768": {
+                  "slidesPerView": 2
+                },
+                "1200": {
+                  "slidesPerView": 3
+                }
+              }
+            }
+          </script>
+
+          <div class="swiper-wrapper">
+
+            <!-- Testimonial Slide 1 -->
+            <div class="swiper-slide">
+              <div class="testimonial-item" data-aos="zoom-in" data-aos-delay="200">
+                <div class="testimonial-header">
+                  <img src="../../static/img/p1.jpg" alt="Client" class="img-fluid" loading="lazy">
+                  <div class="rating">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                  </div>
+                </div>
+                <div class="testimonial-body">
+                  <p>MySchool offer academic excellence & support .Since enrolling my son at CBC, I’ve seen him flourish academically and personally. The teachers genuinely know each student and challenge them to reach their potential while offering unwavering support. CBC isn’t just a school; it’s a place where young minds are nurtured to grow into confident, thoughtful individuals</p>
+                </div>
+                <div class="testimonial-footer">
+                  <h5> Sarah Mwaniki </h5>
+                  <span>mother of Grade 10 student</span>
+                  <div class="quote-icon">
+                    <i class="bi bi-chat-quote-fill"></i>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End Testimonial Slide -->
+
+            <!-- Testimonial Slide 2 -->
+            <div class="swiper-slide">
+              <div class="testimonial-item" data-aos="zoom-in" data-aos-delay="300">
+                <div class="testimonial-header">
+                  <img src="../../static/img/p2.jpg" alt="Client" class="img-fluid" loading="lazy">
+                  <div class="rating">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                  </div>
+                </div>
+                <div class="testimonial-body">
+                  <p>What drew us to CBC was the emphasis on values and character, alongside a rigorous education. Our daughter has learned the importance of integrity, respect, and service to others. We’re grateful for a school that not only educates the mind but also shapes the heart</p>
+                </div>
+                <div class="testimonial-footer">
+                  <h5>David Lusaka</h5>
+                  <span>father of Grade 8 student</span>
+                  <div class="quote-icon">
+                    <i class="bi bi-chat-quote-fill"></i>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End Testimonial Slide -->
+
+            <!-- Testimonial Slide 3 -->
+            <div class="swiper-slide">
+              <div class="testimonial-item" data-aos="zoom-in" data-aos-delay="400">
+                <div class="testimonial-header">
+                  <img src="../../static/img/p3.jpg" alt="Client" class="img-fluid" loading="lazy">
+                  <div class="rating">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                  </div>
+                </div>
+                <div class="testimonial-body">
+                  <p>In MySchool, everyone feels like a true family. From the warm welcome at the gates to the supportive network of teachers and parents, our son has found a community where he belongs. It’s reassuring to know that his growth, happiness, and well-being are a priority here</p>
+                </div>
+                <div class="testimonial-footer">
+                  <h5>Gordon James</h5>
+                  <span>parent of Grade 3</span>
+                  <div class="quote-icon">
+                    <i class="bi bi-chat-quote-fill"></i>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End Testimonial Slide -->
+
+            <!-- Testimonial Slide 4 -->
+            <div class="swiper-slide">
+              <div class="testimonial-item" data-aos="zoom-in" data-aos-delay="500">
+                <div class="testimonial-header">
+                  <img src="../../static/img/p4.jpg" alt="Client" class="img-fluid" loading="lazy">
+                  <div class="rating">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                  </div>
+                </div>
+                <div class="testimonial-body">
+                  <p>MySchool offers an incredible range of extracurricular activities that help students explore their passions. Our daughter has discovered new talents in sports, music, and leadership. It’s inspiring to see a school invest in the holistic development of every child</p>
+                </div>
+                <div class="testimonial-footer">
+                  <h5>Nancy Khakuva</h5>
+                  <span>parent of Grade Grade 1 student</span>
+                  <div class="quote-icon">
+                    <i class="bi bi-chat-quote-fill"></i>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End Testimonial Slide -->
+
+            <!-- Testimonial Slide 5 -->
+            <div class="swiper-slide">
+              <div class="testimonial-item" data-aos="zoom-in" data-aos-delay="600">
+                <div class="testimonial-header">
+                  <img src="../../static/img/p5.jpg" alt="Client" class="img-fluid" loading="lazy">
+                  <div class="rating">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                  </div>
+                </div>
+                <div class="testimonial-body">
+                  <p>Choosing CBC was one of the best decisions we’ve made for our son’s future. The school’s strong academic program, combined with mentorship from experienced teachers, has prepared him for success at every level. We are confident he is well-equipped for the challenges ahead</p>
+                </div>
+                <div class="testimonial-footer">
+                  <h5>Linda Orwa</h5>
+                  <span>mother of play-group</span>
+                  <div class="quote-icon">
+                    <i class="bi bi-chat-quote-fill"></i>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End Testimonial Slide -->
+
+          </div>
+
+          <div class="swiper-navigation">
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /Testimonials Section -->
+
+    <!-- Stats Section -->
+    <section id="stats" class="stats section">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row justify-content-center">
+          <div class="col-lg-8 text-center">
+            <div class="intro-content" data-aos="fade-up" data-aos-delay="200">
+              <h2 class="section-heading">Transforming Lives Through Quality Education</h2>
+              <p class="section-description">With CBC,we believe education is more than textbooks and exams—it’s about shaping confident, compassionate, and capable young people. Through a combination of rigorous academics, strong values, and a supportive community, we empower our students to reach their full potential and make a positive impact in the world. Every lesson, every activity, and every challenge is an opportunity to transform lives and inspire greatness.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row g-4 mt-4">
+          <div class="col-xl-3 col-lg-6 col-md-6">
+            <div class="metric-card" data-aos="flip-left" data-aos-delay="300">
+              <div class="metric-header">
+                <div class="metric-icon-wrapper">
+                  <i class="bi bi-mortarboard-fill"></i>
+                </div>
+                <div class="metric-value">
+                  <span data-purecounter-start="0" data-purecounter-end="85" data-purecounter-duration="1" class="purecounter"></span>%
+                </div>
+              </div>
+              <div class="metric-info">
+                <h4>Success Rate</h4>
+                <p>Excellence Achieved Consistently</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-lg-6 col-md-6">
+            <div class="metric-card" data-aos="flip-left" data-aos-delay="400">
+              <div class="metric-header">
+                <div class="metric-icon-wrapper">
+                  <i class="bi bi-building"></i>
+                </div>
+                <div class="metric-value">
+                  <span data-purecounter-start="0" data-purecounter-end="5" data-purecounter-duration="1" class="purecounter"></span>
+                </div>
+              </div>
+              <div class="metric-info">
+                <h4>Locations</h4>
+                <p>Across the country serving students</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-lg-6 col-md-6">
+            <div class="metric-card" data-aos="flip-left" data-aos-delay="500">
+              <div class="metric-header">
+                <div class="metric-icon-wrapper">
+                  <i class="bi bi-trophy-fill"></i>
+                </div>
+                <div class="metric-value">
+                  <span data-purecounter-start="0" data-purecounter-end="102" data-purecounter-duration="1" class="purecounter"></span>+
+                </div>
+              </div>
+              <div class="metric-info">
+                <h4>Awards Received</h4>
+                <p>Recognition for educational excellence</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-lg-6 col-md-6">
+            <div class="metric-card" data-aos="flip-left" data-aos-delay="600">
+              <div class="metric-header">
+                <div class="metric-icon-wrapper">
+                  <i class="bi bi-globe"></i>
+                </div>
+                <div class="metric-value">
+                  <span data-purecounter-start="0" data-purecounter-end="7" data-purecounter-duration="1" class="purecounter"></span>+
+                </div>
+              </div>
+              <div class="metric-info">
+                <h4>Counties Represented</h4>
+                <p>Diverse student body</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row mt-5">
+          <div class="col-lg-12">
+            <div class="highlights-section" data-aos="fade-up" data-aos-delay="700">
+              <div class="row align-items-center">
+                <div class="col-lg-6">
+                  <div class="highlights-content">
+                    <h3 class="highlights-title">Building Tomorrow's Leaders Today</h3>
+                    <p class="highlights-text">Through CBC, we nurture young minds with knowledge,Shaping confident, compassionate, and capable leaders for a brighter tomorrow</p>
+                    <div class="highlights-features">
+                      <div class="feature-item" data-aos="fade-right" data-aos-delay="800">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Innovative curriculum design</span>
+                      </div>
+                      <div class="feature-item" data-aos="fade-right" data-aos-delay="900">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>World-class faculty expertise</span>
+                      </div>
+                      <div class="feature-item" data-aos="fade-right" data-aos-delay="1000">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Comprehensive student support</span>
+                      </div>
+                    </div>
+                    <div class="highlights-cta">
+                      <a href="#" class="cta-btn primary">Explore Programs</a>
+                      <a href="#" class="cta-btn secondary">Download Brochure</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="highlights-gallery">
+                    <div class="gallery-grid">
+                      <div class="gallery-item large" data-aos="zoom-in" data-aos-delay="800">
+                        <img src="../../static/img/lib.jpg" alt="Campus Life" class="img-fluid" loading="lazy">
+                        <div class="gallery-overlay">
+                          <h5>Modern School</h5>
+                        </div>
+                      </div>
+                      <div class="gallery-item small" data-aos="zoom-in" data-aos-delay="900">
+                        <img src="../../static/img/l2.jpg" alt="Students" class="img-fluid" loading="lazy">
+                        <div class="gallery-overlay">
+                          <h6>Student Life</h6>
+                        </div>
+                      </div>
+                      <div class="gallery-item small" data-aos="zoom-in" data-aos-delay="1000">
+                        <img src="../../static/img/l1.jpg" alt="Faculty" class="img-fluid" loading="lazy">
+                        <div class="gallery-overlay">
+                          <h6>Expert Faculty</h6>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /Stats Section -->
+
+    <!-- Recent News Section -->
+    <section id="recent-news" class="recent-news section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Recent News</h2>
+        <p>Stay updated with the latest achievements, events, and announcements from our CBC community</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+
+          <div class="col-xl-6" data-aos="fade-up" data-aos-delay="100">
+            <article class="post-item d-flex">
+              <div class="post-img">
+                <img src="../../static/img/pp2.jpg" alt="" class="img-fluid" loading="lazy">
+              </div>
+
+              <div class="post-content flex-grow-1">
+                <a href="#" class="category">Library</a>
+
+                <h2 class="post-title">
+                  <a href="#">Where learners do research</a>
+                </h2>
+
+                <p class="post-description">
+                  Our Library is a hub of knowledge, curiosity, and discovery. With a vast collection of books, digital resources, and study spaces, it nurtures a love for reading and learning. Here, students explore ideas, broaden their horizons, and develop the skills to succeed academically and beyond
+                </p>
+
+                <div class="post-meta">
+                  <div class="post-author">
+                    <img src="../../static/img/pp1.jpg" alt="" class="img-fluid">
+                    <span class="author-name">Library</span>
+                  </div>
+                  <span class="post-date">Nov 4, 2025</span>
+                </div>
+              </div>
+            </article>
+          </div><!-- End post item -->
+
+          <div class="col-xl-6" data-aos="fade-up" data-aos-delay="200">
+            <article class="post-item d-flex">
+              <div class="post-img">
+                <img src="../../static/img/pp3.jpg" alt="" class="img-fluid" loading="lazy">
+              </div>
+
+              <div class="post-content flex-grow-1">
+                <a href="#" class="category">Out-door</a>
+
+                <h2 class="post-title">
+                  <a href="#">Learning through nature</a>
+                </h2>
+
+                <p class="post-description">
+                 Our students explore the natural world through hands-on outdoor learning, observing and studying insects up close. This experiential approach sparks curiosity, deepens understanding, and makes science both exciting and memorable.
+                </p>
+
+                <div class="post-meta">
+                  <div class="post-author">
+                    <img src="../../static/img/pp4.jpg" alt="" class="img-fluid">
+                    <span class="author-name">Ragot</span>
+                  </div>
+                  <span class="post-date">12 07, 2025</span>
+                </div>
+              </div>
+            </article>
+          </div><!-- End post item -->
+
+          <div class="col-xl-6" data-aos="fade-up" data-aos-delay="300">
+            <article class="post-item d-flex">
+              <div class="post-img">
+                <img src="../../static/img/sch5.jpg" alt="" class="img-fluid" loading="lazy">
+              </div>
+
+              <div class="post-content flex-grow-1">
+                <a href="#" class="category">Graduation celebration</a>
+
+                <h2 class="post-title">
+                  <a href="#">Graduation celebration</a>
+                </h2>
+
+                <p class="post-description">
+                   Celebrating the achievements of our learners as they graduate, ready to embrace new challenges, opportunities, and the journey ahead. With CBC,we take pride in nurturing confident, capable, and compassionate young adults prepared to make a positive impact on the world
+                </p>
+
+                <div class="post-meta">
+                  <div class="post-author">
+                    <img src="../../static/img/pp2.jpg" alt="" class="img-fluid">
+                    <span class="author-name">tom</span>
+                  </div>
+                  <span class="post-date">Nov 28, 2025</span>
+                </div>
+              </div>
+            </article>
+          </div><!-- End post item -->
+
+          <div class="col-xl-6" data-aos="fade-up" data-aos-delay="400">
+            <article class="post-item d-flex">
+              <div class="post-img">
+                <img src="../../static/img/pp4.jpg" alt="" class="img-fluid" loading="lazy">
+              </div>
+
+              <div class="post-content flex-grow-1">
+                <a href="#" class="category">Creative</a>
+
+                <h2 class="post-title">
+                  <a href="#">Inspiring Innovative Minds</a>
+                </h2>
+
+                <p class="post-description">We cultivate curiosity and imagination, encouraging students to think creatively, solve problems, and develop innovative ideas that shape a brighter future.</p>
+
+                <div class="post-meta">
+                  <div class="post-author">
+                    <img src="../../static/img/g1.jpg" alt="" class="img-fluid">
+                    <span class="author-name">Khakuva Nancy</span>
+                  </div>
+                  <span class="post-date">Dec 5, 2025</span>
+                </div>
+              </div>
+            </article>
+          </div><!-- End post item -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Recent News Section -->
+
+    <!-- Events Section -->
+    <section id="events" class="events section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Events</h2>
+        <p>Stay connected with our vibrant CBC community through exciting events, celebrations, and activities that inspire learning, teamwork, and lasting memories.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row g-4">
+
+          <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">
+            <div class="event-item">
+              <div class="event-image">
+                <img src="../../static/img/ev1.jpg" alt="Workshop" class="img-fluid">
+                <div class="event-date-overlay">
+                  <span class="date">FEB<br>20</span>
+                </div>
+              </div>
+              <div class="event-details">
+                <div class="event-category">
+                  <span class="badge academic">Academic</span>
+                  <span class="event-time">7:00 PM</span>
+                </div>
+                <h3>School entertainment</h3>
+                <p>Entertainment Day at MySchool is a joyful celebration filled with music, creativity, fun activities, and unforgettable moments that bring our learners together</p>
+                <div class="event-info">
+                  <div class="info-row">
+                    <i class="bi bi-geo-alt"></i>
+                    <span>Room TC, Hall</span>
+                  </div>
+                  <div class="info-row">
+                    <i class="bi bi-people"></i>
+                    <span>All learners</span>
+                  </div>
+                </div>
+                <div class="event-footer">
+                  <a href="#" class="register-btn">Register Now</a>
+                  <div class="event-share">
+                    <i class="bi bi-share"></i>
+                    <i class="bi bi-heart"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="300">
+            <div class="event-item">
+              <div class="event-image">
+                <img src="../../static/img/ev7.jpg" alt="Tournament" class="img-fluid">
+                <div class="event-date-overlay">
+                  <span class="date">APR<br>05</span>
+                </div>
+              </div>
+              <div class="event-details">
+                <div class="event-category">
+                  <span class="badge sports">Sports</span>
+                  <span class="event-time">9:00 AM</span>
+                </div>
+                <h3>Inter-School athletics</h3>
+                <p>Our Inter-School Athletics events showcase teamwork, determination, and school spirit as learners compete with passion and  with pride</p>
+                <div class="event-info">
+                  <div class="info-row">
+                    <i class="bi bi-geo-alt"></i>
+                    <span>Sports Bike ride</span>
+                  </div>
+                  <div class="info-row">
+                    <i class="bi bi-people"></i>
+                    <span>8 Teams</span>
+                  </div>
+                </div>
+                <div class="event-footer">
+                  <a href="#" class="register-btn">Register Now</a>
+                  <div class="event-share">
+                    <i class="bi bi-share"></i>
+                    <i class="bi bi-heart"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="400">
+            <div class="event-item">
+              <div class="event-image">
+                <img src="../../static/img/ev4.jpg" alt="Art Exhibition" class="img-fluid">
+                <div class="event-date-overlay">
+                  <span class="date">APR<br>12</span>
+                </div>
+              </div>
+              <div class="event-details">
+                <div class="event-category">
+                  <span class="badge arts">Arts</span>
+                  <span class="event-time">6:00 PM</span>
+                </div>
+                <h3>Student Art Exhibition Opening</h3>
+                <p>Our Student Art Exhibition Opening celebrates the creativity and talent of our learners, showcasing their artistic expression, imagination, and hard work.</p>
+                <div class="event-info">
+                  <div class="info-row">
+                    <i class="bi bi-geo-alt"></i>
+                    <span>Art Gallery, First Floor</span>
+                  </div>
+                  <div class="info-row">
+                    <i class="bi bi-people"></i>
+                    <span>Open to All</span>
+                  </div>
+                </div>
+                <div class="event-footer">
+                  <a href="#" class="register-btn">Register Now</a>
+                  <div class="event-share">
+                    <i class="bi bi-share"></i>
+                    <i class="bi bi-heart"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">
+            <div class="event-item">
+              <div class="event-image">
+                <img src="../../static/img/ev2.jpg" alt="Science Fair" class="img-fluid">
+                <div class="event-date-overlay">
+                  <span class="date">MAY<br>03</span>
+                </div>
+              </div>
+              <div class="event-details">
+                <div class="event-category">
+                  <span class="badge academic">Academic</span>
+                  <span class="event-time">10:00 AM</span>
+                </div>
+                <h3>Annual Science Fair Competition</h3>
+                <p>Our Annual Science Fair Competition inspires curiosity and innovation as learners present creative experiments, explore scientific ideas, and showcase their problem-solving skills</p>
+                <div class="event-info">
+                  <div class="info-row">
+                    <i class="bi bi-geo-alt"></i>
+                    <span>Main Auditorium Hall</span>
+                  </div>
+                  <div class="info-row">
+                    <i class="bi bi-people"></i>
+                    <span>21 Projects</span>
+                  </div>
+                </div>
+                <div class="event-footer">
+                  <a href="#" class="register-btn">Register Now</a>
+                  <div class="event-share">
+                    <i class="bi bi-share"></i>
+                    <i class="bi bi-heart"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="300">
+            <div class="event-item">
+              <div class="event-image">
+                <img src="../../static/img/ev9.jpg" alt="Community Event" class="img-fluid">
+                <div class="event-date-overlay">
+                  <span class="date">MAY<br>15</span>
+                </div>
+              </div>
+              <div class="event-details">
+                <div class="event-category">
+                  <span class="badge community">Community</span>
+                  <span class="event-time">3:00 PM</span>
+                </div>
+                <h3>Family Fun Day Celebration</h3>
+                <p>Family Fun Day brings our school community together for laughter, games, and memorable activities that strengthen bonds between learners, parents, and teachers</p>
+                <div class="event-info">
+                  <div class="info-row">
+                    <i class="bi bi-geo-alt"></i>
+                    <span>School Playground Area</span>
+                  </div>
+                  <div class="info-row">
+                    <i class="bi bi-people"></i>
+                    <span>All Families</span>
+                  </div>
+                </div>
+                <div class="event-footer">
+                  <a href="#" class="register-btn">Register Now</a>
+                  <div class="event-share">
+                    <i class="bi bi-share"></i>
+                    <i class="bi bi-heart"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="400">
+            <div class="event-item">
+              <div class="event-image">
+                <img src="../../static/img/ev11.jpg" alt="Music Concert" class="img-fluid">
+                <div class="event-date-overlay">
+                  <span class="date">OCT<br>05</span>
+                </div>
+              </div>
+              <div class="event-details">
+                <div class="event-category">
+                  <span class="badge arts">Arts</span>
+                  <span class="event-time">7:30 PM</span>
+                </div>
+                <h3>Summer Music Concert Finale</h3>
+                <p>Our Summer Music Concert Finale showcases the incredible musical talent of our learners, filling the stage with melody, creativity, and unforgettable performances</p>
+                <div class="event-info">
+                  <div class="info-row">
+                    <i class="bi bi-geo-alt"></i>
+                    <span>Music Hall Theater</span>
+                  </div>
+                  <div class="info-row">
+                    <i class="bi bi-people"></i>
+                    <span>340 Seats</span>
+                  </div>
+                </div>
+                <div class="event-footer">
+                  <a href="#" class="register-btn">Register Now</a>
+                  <div class="event-share">
+                    <i class="bi bi-share"></i>
+                    <i class="bi bi-heart"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="events-navigation" data-aos="fade-up" data-aos-delay="500">
+          <div class="row align-items-center">
+            <div class="col-md-8">
+              <div class="filter-tabs">
+                <button class="filter-tab active" data-filter="all">All Events</button>
+                <button class="filter-tab" data-filter="academic">Academic</button>
+                <button class="filter-tab" data-filter="sports">Sports</button>
+                <button class="filter-tab" data-filter="arts">Arts</button>
+                <button class="filter-tab" data-filter="community">Community</button>
+              </div>
+            </div>
+            <div class="col-md-4 text-end">
+              <a href="#" class="view-calendar-btn">
+                <i class="bi bi-calendar3"></i>
+                View Calendar
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /Events Section -->
+
+  </main>
+
+<footer id="footer" class="footer position-relative light-background">
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="{% url 'index' %}" class="logo d-flex align-items-center">
+            <span class="sitename">MySchool</span>
+          </a>
+          <div class="footer-contact pt-3">
+            <p>75, Kimathi, Street</p>
+            <p>Nairobi, Kenya</p>
+            <p class="mt-3"><strong>Phone:</strong> <span>+254797616280</span></p>
+            <p><strong>Email:</strong> <span>bidenbiden2030@gmail.com</span></p>
+          </div>
+            <div class="social-links text-center">
+      <a href="https://twitter.com/@ragot99848" class="twitter"><i class="bi bi-twitter-x"></i></a>
+      <a href="https://www.facebook.com/tom.ragot.1/" class="facebook"><i class="bi bi-facebook"></i></a>
+      <a href="https://www.instagram.com/ragotjunior9/" class="instagram"><i class="bi bi-instagram"></i></a>
+      <a href="https://account.microsoft.com/profile?lang=en-US#main-content-landing-react" class="google-plus"><i class="bi bi-skype"></i></a>
+      <a href="https://www.linkedin.com/in/tom-ragot-048437188/" class="linkedin"><i class="bi bi-linkedin"></i></a>
+    </div>
+
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><a href="{% url 'index' %}">Home</a></li>
+            <li><a href="{% url 'about' %}">About us</a></li>
+            <li><a href="{% url 'academics' %}">Services</a></li>
+            <li><a href="{% url 'termOfservice' %}">Terms of service</a></li>
+            <li><a href="{% url 'privacy' %}">Privacy policy</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>More About Us</h4>
+          <ul>
+            <li><a href="{% url 'admissions' %}">Admission</a></li>
+            <li><a href="{% url 'alumni' %}">alumni</a></li>
+            <li><a href="{% url 'assessments' %}">Assessments</a></li>
+            <li><a href="{% url 'contact' %}">Contact Us</a></li>
+            <li><a href="{% url 'events' %}">Our Events</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">MySchool</strong> <span>All Rights Reserved</span></p>
+      <div class="credits">
+
+        Designed by <a href="https://bootstrapmade.com/">ragot</a>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="../../static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../../static/vendor/php-email-form/validate.js"></script>
+  <script src="../../static/vendor/aos/aos.js"></script>
+  <script src="../../static/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="../../static/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="../../static/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="../../static/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="../../static/vendor/glightbox/js/glightbox.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="../../static/js/main.js"></script>
+
+</body>
+
+</html>
