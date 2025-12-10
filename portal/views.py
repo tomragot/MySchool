@@ -1,32 +1,53 @@
 from urllib import request
-
 from django.shortcuts import render, redirect
-from django.http import HttpResponse
-from .models import AdmissionsRequest
+from .models import AdmissionRequest
 
-def admissions_request(request):
-    if request.method == "POST":
-        name = request.POST.get("name")
-        email = request.POST.get("email")
-        phone = request.POST.get("phone")
-        subject = request.POST.get("subject")
-        message = request.POST.get("message")
+from pyexpat.errors import messages
+# from .models import ApplicationRequest
 
-        AdmissionsRequest.objects.create(
-            name=name,
-            email=email,
-            phone=phone,
-            subject=subject,
-            message=message
-        )
-
-        return HttpResponse("Form submitted successfully!")  # or redirect to a success page
-
-    return render(request, "admissions.html")
+# Create your views here.
+# def admin(request):
+#     return render(request, 'admin.html')
+#
+# def add_item(request):
+#     return render(request, "portal/add_item.html")
 
 
 
 
+#
+# def submit_application(request):
+#     if request.method == "POST":
+#         name = request.POST.get("name")
+#         email = request.POST.get("email")
+#         phone = request.POST.get("phone")
+#         subject = request.POST.get("subject")
+#         message = request.POST.get("message")
+#
+#         ApplicationRequest.objects.create(
+#             name=name,
+#             email=email,
+#             phone=phone,
+#             subject=subject,
+#             message=message
+#         )
+#
+#         return render(request, "success.html")  # or redirect
+#     return render(request, "application_form.html")
+#
+#
+#
+# def submit_application(request):
+#     if request.method == 'POST':
+#         form = ApplicationRequest(request.POST)
+#         if form.is_valid():
+#             form.save()
+#             messages.success(request, 'Application submitted!')
+#
+#     return redirect('programmes')
+
+
+ # include app folder
 
 
 def index(request):
@@ -35,8 +56,6 @@ def about(request):
     return render(request, 'about.html')
 def error(request):
     return render(request, '404.html')
-def admissions(request):
-    return render(request, 'admissions.html')
 def assessments(request):
     return render(request, 'assessments.html')
 
@@ -72,3 +91,13 @@ def privacy(request):
     return render(request, 'privacy.html')
 def starter_page(request):
     return render(request, 'starter_page.html')
+def admissions(request):
+    if request.method == "POST":
+        name = request.POST.get("name")
+        email = request.POST.get("email")
+        phone = request.POST.get("phone")
+        program = request.POST.get("program")
+        message = request.POST.get("message")
+        AdmissionRequest.objects.create(name=name, email=email, phone=phone, program=program, message=message)
+        return redirect('index')
+    return render(request, 'admissions.html')

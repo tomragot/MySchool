@@ -239,40 +239,45 @@
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
             <div class="contact-form-card">
               <h3 class="section-subtitle">Request Information</h3>
-              <form action="{% url 'admissions_request' %}" class="php-email-form" method="POST">
+             <form action="" method="POST" class="">
+    {% csrf_token %}
 
-                 {% csrf_token %}
-                <div class="row g-3">
-                  <div class="col-12">
-                    <input type="text" name="name" class="form-control" placeholder="Name*" required="">
-                  </div>
-                  <div class="col-md-6">
-                    <input type="email" name="email" class="form-control" placeholder="Email Address*" required="">
-                  </div>
-                  <div class="col-md-6">
-                    <input type="tel" name="phone" class="form-control" placeholder="Phone Number">
-                  </div>
-                  <div class="col-12">
-                    <select name="subject" class="form-select" required="">
-                      <option selected="" disabled="">Program of Interest*</option>
-                      <option>Kindergarten</option>
-                      <option>Pre-School</option>
-                      <option>JS</option>
-                      <option>Robotic</option>
-                      <option>Games and sport</option>
-                    </select>
-                  </div>
-                  <div class="col-12">
-                    <textarea name="message" class="form-control" rows="7" placeholder="Questions or Comments"></textarea>
-                  </div>
-                  <div class="col-12">
-                    <div class="loading">Loading</div>
-                    <div class="error-message"></div>
-                    <div class="sent-message">Your message has been sent. Thank you!</div>
-                    <button type="submit" class="btn btn-request">Request Information</button>
-                  </div>
-                </div>
-              </form>
+    <div class="row g-3">
+
+        <div class="col-12">
+            <input type="text" name="name" class="form-control" placeholder="Name*" required>
+        </div>
+
+        <div class="col-md-6">
+            <input type="email" name="email" class="form-control" placeholder="Email Address*" required>
+        </div>
+
+        <div class="col-md-6">
+            <input type="tel" name="phone" class="form-control" placeholder="Phone Number">
+        </div>
+
+        <div class="col-12">
+            <select name="program" class="form-select" required>
+                <option selected disabled>Program of Interest*</option>
+                <option>Kindergarten</option>
+                <option>Pre-School</option>
+                <option>JS</option>
+                <option>Robotic</option>
+                <option>Games and sport</option>
+            </select>
+        </div>
+
+        <div class="col-12">
+            <textarea name="message" class="form-control" rows="7" placeholder="Questions or Comments"></textarea>
+        </div>
+
+        <div class="col-12">
+            <button type="submit" class="btn btn-request">Request Information</button>
+        </div>
+
+    </div>
+</form>
+
             </div>
           </div>
         </div>
